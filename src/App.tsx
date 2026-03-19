@@ -26,9 +26,9 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
+      <div id="app-wrapper" className="min-h-screen flex flex-col">
+        <Navbar id="main-navbar" />
+        <main id="main-content" className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
@@ -42,7 +42,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
-        <Footer />
+        <Footer id="main-footer" />
       </div>
     </Router>
   );
